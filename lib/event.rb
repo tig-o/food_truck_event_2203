@@ -1,5 +1,5 @@
 class Event
-  def initialize(argument)
-
+  def initialize(name)
+    
   end
 end
