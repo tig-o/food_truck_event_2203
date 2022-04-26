@@ -21,4 +21,12 @@ class FoodTruck
       @inventory[item] += amount
     end
   end
+
+  def potential_revenue
+    inventory.sum do |item, count|
+      # require "pry"; binding.pry
+      item.price * count
+    end
+
+  end
 end
