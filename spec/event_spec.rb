@@ -134,7 +134,7 @@ RSpec.describe Event do
     expect(event.sorted_item_list).to eq(['Apple Pie (Slice)', "Banana Nice Cream", 'Peach Pie (Slice)', "Peach-Raspberry Nice Cream"])
   end
 
-  xit 'can check for for overstocked items' do
+  it 'can check for for overstocked items' do
     event = Event.new("South Pearl Street Farmers Market")
     item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
     item2 = Item.new({name: 'Apple Pie (Slice)', price: '$2.50'})
@@ -159,7 +159,7 @@ RSpec.describe Event do
     expect(event.overstocked_items).to eq([item1])
   end
 
-  xit 'can return total inventory' do
+  it 'can return total inventory' do
     event = Event.new("South Pearl Street Farmers Market")
     item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
     item2 = Item.new({name: 'Apple Pie (Slice)', price: '$2.50'})
