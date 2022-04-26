@@ -20,4 +20,17 @@ class Event
       food_truck.name
     end
   end
+
+  def food_trucks_that_sell(desired_item)
+    # # require "pry"; binding.pry
+    # @food_trucks.find_all do |food_truck|
+    #   # require "pry"; binding.pry
+    #   food_truck.
+    # end
+
+    @food_trucks.select do |truck|
+      # require "pry"; binding.pry
+      truck.inventory.include? desired_item
+    end
+  end
 end
